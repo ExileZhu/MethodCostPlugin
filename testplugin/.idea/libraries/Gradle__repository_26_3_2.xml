@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: repository-26.3.2">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/26.3.2/repository-26.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

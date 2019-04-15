@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ddmlib-26.3.2">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/26.3.2/ddmlib-26.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

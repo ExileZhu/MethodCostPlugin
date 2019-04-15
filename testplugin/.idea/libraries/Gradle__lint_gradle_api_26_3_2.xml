@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: lint-gradle-api-26.3.2">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-gradle-api/26.3.2/lint-gradle-api-26.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
