@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'TestPlugin'
 
 android {
     compileSdkVersion 28
@@ -18,6 +17,7 @@ android {
         }
     }
 }
+apply plugin: 'TestPlugin'
 
 buildscript {
 

@@ -33,6 +33,7 @@ public class CallClassAdapter extends ClassVisitor implements Opcodes {
         MethodVisitor mv = cv.visitMethod(access, name, desc, signature, exceptions);
         return new AdviceAdapter(Opcodes.ASM6, mv, access, name, desc) {
             boolean intercept;
+
             @Override
             public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
                 if (Type.getDescriptor(Cost.class).equals(desc)) {
@@ -47,6 +48,11 @@ public class CallClassAdapter extends ClassVisitor implements Opcodes {
                 mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
                 mv.visitLdcInsn("onMethodEnter" + name);
                 mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
+
+
+                mv.visitLdcInsn(name);
+                mv.visitMethodInsn(INVOKESTATIC, "com/example/testplugin/MethodLooker", "noteStartTime", "(Ljava/lang/String;)V", false);
+
             }
 
             @Override
@@ -55,6 +61,10 @@ public class CallClassAdapter extends ClassVisitor implements Opcodes {
                 mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
                 mv.visitLdcInsn("onMethodExit" + name);
                 mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
+
+                mv.visitLdcInsn(name);
+                mv.visitMethodInsn(INVOKESTATIC, "com/example/testplugin/MethodLooker", "noteEndTime", "(Ljava/lang/String;)V", false);
+
             }
         };
     }
