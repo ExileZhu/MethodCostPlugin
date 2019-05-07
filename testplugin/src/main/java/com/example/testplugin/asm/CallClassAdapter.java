@@ -49,7 +49,6 @@ public class CallClassAdapter extends ClassVisitor implements Opcodes {
                 mv.visitLdcInsn("onMethodEnter" + name);
                 mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
 
-
                 mv.visitLdcInsn(name);
                 mv.visitMethodInsn(INVOKESTATIC, "com/example/testplugin/MethodLooker", "noteStartTime", "(Ljava/lang/String;)V", false);
 
